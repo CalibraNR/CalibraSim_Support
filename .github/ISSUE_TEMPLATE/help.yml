@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Everything you post here is public. Never post your SimBrief Pilot ID.
-        If you attach Log.txt, delete the line that contains `SimBrief Pilot ID` first.
+        If you attach Log.txt, first delete every line that contains `Pilot ID`.
   - type: input
     id: version
     attributes:

@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to report this. Everything you post here is public.
-        **Before attaching Log.txt, delete the line that contains `SimBrief Pilot ID`.**
+        **Before attaching Log.txt, delete every line that contains `Pilot ID`** (there are several, all starting with `A330 MCDU:`).
   - type: input
     id: version
     attributes:
@@ -67,7 +67,8 @@ body:
     attributes:
       label: How was the aircraft installed?
       options:
-        - Over a copy of the default A330-300 (as in the README)
+        - Over a copy of the default A330-300, outside the Laminar Research folder (as in the README)
+        - Over a copy of the default A330-300, inside the Laminar Research folder
         - Over the original A330-300 folder
         - Zip extracted directly into the Aircraft folder
         - Other (explain below)
@@ -134,7 +135,7 @@ body:
     attributes:
       label: Checks
       options:
-        - label: I removed the line containing "SimBrief Pilot ID" from Log.txt.
+        - label: I removed every line containing "Pilot ID" from Log.txt.
           required: true
         - label: I am using the official package, without modified files.
           required: true
