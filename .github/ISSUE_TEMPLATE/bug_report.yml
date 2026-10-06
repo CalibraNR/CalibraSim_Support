@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to report this. Everything you post here is public.
-        **Before attaching Log.txt, delete every line that contains `Pilot ID`** (there are several, all starting with `A330 MCDU:`).
+        Log.txt shows folder paths from your computer; remove anything you do not want to share. Never post your SimBrief Pilot ID.
   - type: input
     id: version
     attributes:
@@ -135,8 +135,6 @@ body:
     attributes:
       label: Checks
       options:
-        - label: I removed every line containing "Pilot ID" from Log.txt.
-          required: true
         - label: I am using the official package, without modified files.
           required: true
         - label: I searched the existing issues.

@@ -31,9 +31,9 @@ We will ask for two files:
 
 Everything posted in this repository can be read by anyone. Before you attach `Log.txt`:
 
-- Delete **every** line that contains `Pilot ID`. If you use SimBrief on the MCDU there are several of them, all
-  starting with `A330 MCDU:`. Searching the file for your own Pilot ID number is a quick way to check.
-- Remove anything else you do not want to share, such as your user name in folder paths.
+- `Log.txt` shows folder paths from your computer, which can include your user name. Remove anything you do not want
+  to share.
+- The aircraft's plugin does not write your SimBrief Pilot ID to `Log.txt`.
 
 Never post your SimBrief Pilot ID. We will never ask for it.
 
