@@ -1,0 +1,142 @@
+name: Bug report
+description: Something in the A330-200 does not work as described.
+title: "[Bug] "
+labels: ["needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Everything you post here is public.
+        **Before attaching Log.txt, delete the line that contains `SimBrief Pilot ID`.**
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      description: From version.txt in the aircraft folder.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: xplane
+    attributes:
+      label: X-Plane version
+      options:
+        - "12.4.4"
+        - "12.4.3"
+        - Other (not tested by us, say which one below)
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Engine in use
+      options:
+        - Rolls-Royce Trent 700 (included)
+        - GE CF6-80E1 (Carda mod)
+        - PW4000 (Carda mod)
+    validations:
+      required: true
+  - type: dropdown
+    id: carda
+    attributes:
+      label: Are the "GE Engines" / "PW Engines" folders installed?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+  - type: input
+    id: livery
+    attributes:
+      label: Livery folder name
+      description: The exact name of the livery folder, including the RR / GE / PW tag.
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How was the aircraft installed?
+      options:
+        - Over a copy of the default A330-300 (as in the README)
+        - Over the original A330-300 folder
+        - Zip extracted directly into the Aircraft folder
+        - Other (explain below)
+    validations:
+      required: true
+  - type: dropdown
+    id: default_a333
+    attributes:
+      label: Does it also happen on the default A330-300?
+      options:
+        - Not tested
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: plugins_off
+    attributes:
+      label: Does it still happen with third-party plugins and scripts disabled?
+      options:
+        - Not tested
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: phase
+    attributes:
+      label: Flight phase
+      placeholder: "Cold and dark, taxi, take-off, climb, cruise, descent, approach, landing"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Log.txt, version.txt and screenshots
+      description: >
+        Drag the files here. Log.txt must be from the same session in which the problem happened
+        (X-Plane overwrites it at every start).
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I removed the line containing "SimBrief Pilot ID" from Log.txt.
+          required: true
+        - label: I am using the official package, without modified files.
+          required: true
+        - label: I searched the existing issues.
+          required: true

@@ -1,0 +1,32 @@
+name: Sync labels
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/labels.yml"]
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Create or update labels
+        run: |
+          gh label create needs-triage         --force --color FBCA04 --description "New report, not looked at yet"
+          gh label create needs-log            --force --color D93F0B --description "Waiting for Log.txt and version.txt"
+          gh label create calibra-bug          --force --color B60205 --description "Defect in our package"
+          gh label create laminar-default      --force --color 5319E7 --description "Also on the default A330-300 or from X-Plane"
+          gh label create usage-install        --force --color 0E8A16 --description "Installation or usage"
+          gh label create third-party-conflict --force --color 006B75 --description "Caused by another plugin, script or add-on"
+          gh label create known-issue          --force --color C5DEF5 --description "Already listed as a known issue"
+          gh label create untested-version     --force --color BFD4F2 --description "X-Plane version we have not tested"
+          gh label create fixed-next-release   --force --color 0052CC --description "Fixed, ships with the next package"
+          gh label create sev-1-blocks-flight  --force --color B60205 --description "The flight cannot be completed"
+          gh label create sev-2-degrades-flight --force --color D93F0B --description "The flight can be completed with a workaround"
+          gh label create sev-3-cosmetic       --force --color FEF2C0 --description "Visual or text only"
