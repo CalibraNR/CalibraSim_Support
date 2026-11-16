@@ -19,7 +19,7 @@ jobs:
       - name: Create or update labels
         run: |
           gh label create needs-triage         --force --color FBCA04 --description "New report, not looked at yet"
-          gh label create needs-log            --force --color D93F0B --description "Waiting for Log.txt and version.txt"
+          gh label create needs-log            --force --color D93F0B --description "Waiting for the debug report (.zip)"
           gh label create calibra-bug          --force --color B60205 --description "Defect in our package"
           gh label create laminar-default      --force --color 5319E7 --description "Also on the default A330-300 or from X-Plane"
           gh label create usage-install        --force --color 0E8A16 --description "Installation or usage"
