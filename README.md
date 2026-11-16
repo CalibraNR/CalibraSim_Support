@@ -21,19 +21,25 @@ Use the [issue forms](../../issues/new/choose):
 - **Bug report**: something does not work as described.
 - **Installation or usage help**: you are not sure how to install or use something.
 
-We will ask for two files:
+We will ask for the **debug report**, a .zip the aircraft creates for you:
+
+1. Right after the problem happens, open the tablet and go to **Options > Support > Save debug report**.
+2. The .zip is saved in `Output/Calibra A330-200/debug` (inside your X-Plane 12 folder).
+3. Drag it into the issue form. Add screenshots if they help.
+
+If the tablet does not open or the aircraft does not load, attach these instead:
 
 - `version.txt`, from the aircraft folder.
 - `Log.txt`, from the X-Plane 12 folder, **from the same session in which the problem happened**. X-Plane overwrites
   this file every time it starts.
 
-### Your Log.txt is public here
+### Your debug report is public here
 
-Everything posted in this repository can be read by anyone. Before you attach `Log.txt`:
+Everything posted in this repository can be read by anyone. Before you attach the report:
 
-- `Log.txt` shows folder paths from your computer, which can include your user name. Remove anything you do not want
-  to share.
-- The aircraft's plugin does not write your SimBrief Pilot ID to `Log.txt`.
+- It replaces your user and computer names, and does not include your SimBrief Pilot ID. Look through the files
+  anyway and remove anything you do not want to share.
+- `Log.txt` shows folder paths from your computer, which can include your user name.
 
 Never post your SimBrief Pilot ID. We will never ask for it.
 
@@ -56,7 +62,7 @@ Each report gets one of these labels after we look at it:
 | `laminar-default` | Also happens on the default A330-300 or comes from X-Plane. We report these upstream. |
 | `usage-install` | Installation or usage. Answered here and added to the FAQ when it is common. |
 | `third-party-conflict` | Caused by another plugin, script or add-on. |
-| `needs-log` | We cannot look into it without `Log.txt` and `version.txt`. |
+| `needs-log` | We cannot look into it without the debug report (or `Log.txt` and `version.txt`). |
 
 This is a freeware project. We answer every report, but we do not promise dates for fixes or new features.
 

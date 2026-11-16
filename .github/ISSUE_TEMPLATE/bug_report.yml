@@ -6,14 +6,17 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report this. Everything you post here is public.
-        Log.txt shows folder paths from your computer; remove anything you do not want to share. Never post your SimBrief Pilot ID.
+        Thanks for taking the time to report this. This is a public beta, so reports from Windows, macOS and Linux are all welcome.
+        Everything you post here is public. Never post your SimBrief Pilot ID.
+
+        **Attach the debug report.** In the tablet, open Options > Support > Save debug report, then drag the .zip it creates
+        (in `Output/Calibra A330-200/debug`) into the last box. Look through the files before attaching.
   - type: input
     id: version
     attributes:
       label: Package version
       description: From version.txt in the aircraft folder.
-      placeholder: "1.0.0"
+      placeholder: "1.0.0-beta.2"
     validations:
       required: true
   - type: dropdown
@@ -124,10 +127,11 @@ body:
   - type: textarea
     id: files
     attributes:
-      label: Log.txt, version.txt and screenshots
+      label: Debug report (.zip) and screenshots
       description: >
-        Drag the files here. Log.txt must be from the same session in which the problem happened
-        (X-Plane overwrites it at every start).
+        Drag here the .zip from tablet > Options > Support > Save debug report, saved right after the problem
+        happened, and screenshots if they help. If the tablet does not open or the aircraft does not load, attach
+        Log.txt (from the same session; X-Plane overwrites it at every start) and version.txt instead.
     validations:
       required: true
   - type: checkboxes

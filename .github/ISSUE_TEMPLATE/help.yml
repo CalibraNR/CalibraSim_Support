@@ -7,13 +7,14 @@ body:
     attributes:
       value: |
         Everything you post here is public. Never post your SimBrief Pilot ID.
-        Log.txt shows folder paths from your computer; remove anything you do not want to share.
+        If something is not working, attach the debug report: in the tablet, Options > Support > Save debug report, then
+        the .zip in `Output/Calibra A330-200/debug`. Look through the files before attaching.
   - type: input
     id: version
     attributes:
       label: Package version
       description: From version.txt in the aircraft folder.
-      placeholder: "1.0.0"
+      placeholder: "1.0.0-beta.2"
     validations:
       required: true
   - type: input
@@ -55,4 +56,4 @@ body:
   - type: textarea
     id: files
     attributes:
-      label: Log.txt and screenshots (optional)
+      label: Debug report (.zip) and screenshots (optional)
