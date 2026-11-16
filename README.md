@@ -8,7 +8,7 @@ what is being looked at.
 ## Before you open an issue
 
 1. Read the `README` that comes in the package. It covers installation, the optional engines and the known issues.
-2. Check that the aircraft was installed over a **copy** of the default Airbus A330-300, not over the original folder.
+2. Check that the folder "Calibra A330-200" is directly in `X-Plane 12/Aircraft/`. It is a complete aircraft: it needs no copy of the default A330-300, and the default one is not changed.
 3. Try again with third-party plugins and scripts disabled. Many reports turn out to be a conflict with another add-on.
 4. If you can, try the same thing on the default A330-300. If it happens there too, it comes from the default aircraft
    or from X-Plane.
