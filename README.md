@@ -27,11 +27,9 @@ We will ask for the **debug report**, a .zip the aircraft creates for you:
 2. The .zip is saved in `Output/Calibra A330-200/debug` (inside your X-Plane 12 folder).
 3. Drag it into the issue form. Add screenshots if they help.
 
-If the tablet does not open or the aircraft does not load, attach these instead:
-
-- `version.txt`, from the aircraft folder.
-- `Log.txt`, from the X-Plane 12 folder, **from the same session in which the problem happened**. X-Plane overwrites
-  this file every time it starts.
+Save it right after the problem, without reloading the aircraft or closing X-Plane (it covers the last 30 minutes).
+No tablet? In X-Plane's Settings > Keyboard, bind the command `a330v3/debug/save` to a key and press it. The report
+already has your versions, operating system and plugin list.
 
 ### Your debug report is public here
 
@@ -39,8 +37,6 @@ Everything posted in this repository can be read by anyone. Before you attach th
 
 - It replaces your user and computer names, and does not include your SimBrief Pilot ID. Look through the files
   anyway and remove anything you do not want to share.
-- `Log.txt` shows folder paths from your computer, which can include your user name.
-
 Never post your SimBrief Pilot ID. We will never ask for it.
 
 ## What we support
@@ -62,7 +58,7 @@ Each report gets one of these labels after we look at it:
 | `laminar-default` | Also happens on the default A330-300 or comes from X-Plane. We report these upstream. |
 | `usage-install` | Installation or usage. Answered here and added to the FAQ when it is common. |
 | `third-party-conflict` | Caused by another plugin, script or add-on. |
-| `needs-log` | We cannot look into it without the debug report (or `Log.txt` and `version.txt`). |
+| `needs-log` | We cannot look into it without the debug report (.zip). |
 
 This is a freeware project. We answer every report, but we do not promise dates for fixes or new features.
 

@@ -15,10 +15,10 @@ body:
     id: version
     attributes:
       label: Package version
-      description: From version.txt in the aircraft folder.
+      description: The PLUGIN line on the MCDU, page A/C CONFIG. The debug report also has it.
       placeholder: "1.0.0-beta.2"
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: xplane
     attributes:
@@ -130,8 +130,8 @@ body:
       label: Debug report (.zip) and screenshots
       description: >
         Drag here the .zip from tablet > Options > Support > Save debug report, saved right after the problem
-        happened, and screenshots if they help. If the tablet does not open or the aircraft does not load, attach
-        Log.txt (from the same session; X-Plane overwrites it at every start) and version.txt instead.
+        happened, without reloading the aircraft or closing X-Plane (it covers the last 30 minutes), and screenshots
+        if they help. No tablet? Bind the command a330v3/debug/save to a key in X-Plane Settings > Keyboard.
     validations:
       required: true
   - type: checkboxes
